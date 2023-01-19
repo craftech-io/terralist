@@ -46,6 +46,8 @@ const (
 	ModulesStorageResolverFlag   = "modules-storage-resolver"
 	ProvidersStorageResolverFlag = "providers-storage-resolver"
 
+    AWSEndpointFlag           = "aws-endpoint"
+
 	S3BucketNameFlag      = "s3-bucket-name"
 	S3BucketRegionFlag    = "s3-bucket-region"
 	S3BucketPrefixFlag    = "s3-bucket-prefix"

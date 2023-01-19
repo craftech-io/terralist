@@ -18,6 +18,7 @@ type Config struct {
 	BucketPrefix    string
 	AccessKeyID     string
 	SecretAccessKey string
+    AWSEndpoint     string
 
 	LinkExpire         int
 	DefaultCredentials bool
@@ -30,7 +31,7 @@ func (c *Config) Validate() error {
 		return fmt.Errorf("missing required attribute 'BucketName'")
 	}
 
-	if c.AccessKeyID == "" || c.SecretAccessKey == "" {
+	if c.AccessKeyID == "" || c.SecretAccessKey == "" || c.AWSEndpoint == "" {
 		c.DefaultCredentials = true
 	} else {
 		c.DefaultCredentials = false

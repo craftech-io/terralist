@@ -28,10 +28,11 @@ func (t *Creator) New(config storage.Configurator) (storage.Resolver, error) {
 
 	sess, err := session.NewSessionWithOptions(session.Options{
 		Config: aws.Config{
-			Region:      aws.String(cfg.BucketRegion),
-			MaxRetries:  aws.Int(1),
-			Credentials: creds,
-		},
+            Region:      aws.String(cfg.BucketRegion),
+            MaxRetries:  aws.Int(1),
+            Credentials: creds,
+            Endpoint: aws.String(cfg.AWSEndpoint),
+        },
 		SharedConfigState: sharedConfig,
 	})
 
