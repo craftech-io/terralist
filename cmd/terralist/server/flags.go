@@ -177,6 +177,10 @@ var flags = map[string]cli.Flag{
 		DefaultValue: "proxy",
 	},
 
+	AWSEndpointFlag: &cli.StringFlag{
+		Description: "The aws endpoint.",
+	},
+
 	S3BucketNameFlag: &cli.StringFlag{
 		Description: "The S3 bucket name.",
 	},
